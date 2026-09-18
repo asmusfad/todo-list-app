@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple to-do list for your daily tasks.">
+  <title>My To-Do List</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <span class="app-icon" aria-hidden="true">✓</span>
+      <h1>My to-do list</h1>
+    </header>
+
+    <form id="task-form" class="add-form">
+      <label for="task-input" class="sr-only">New task</label>
+      <input
+        id="task-input"
+        type="text"
+        placeholder="What needs to get done?"
+        maxlength="200"
+        autocomplete="off"
+        required
+      >
+      <button type="submit" class="add-button">Add task</button>
+    </form>
+
+    <div class="filters" role="group" aria-label="Filter tasks">
+      <button type="button" data-filter="all" aria-pressed="true">
+        All
+      </button>
+      <button type="button" data-filter="active" aria-pressed="false">
+        Active
+      </button>
+      <button type="button" data-filter="completed" aria-pressed="false">
+        Completed
+      </button>
+    </div>
+
+    <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+    <p id="empty-state" class="empty-state"></p>
+
+    <footer class="app-footer">
+      <span id="task-count" role="status" aria-live="polite">
+        0 tasks left
+      </span>
+      <button
+        id="clear-completed"
+        type="button"
+        class="text-button"
+        disabled
+      >
+        Clear completed
+      </button>
+    </footer>
+
+    <p id="storage-notice" class="storage-notice" role="status" hidden></p>
+
+    <noscript>Please enable JavaScript to use your to-do list.</noscript>
+  </main>
+</body>
+</html>
