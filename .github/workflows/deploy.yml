@@ -1,3 +1,4 @@
+# Triggered after switching GitHub Pages source to GitHub Actions
 name: Deploy React app to GitHub Pages
 
 on:
